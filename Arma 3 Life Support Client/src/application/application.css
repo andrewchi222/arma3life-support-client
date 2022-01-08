@@ -1,0 +1,88 @@
+.font-style {
+	-fx-font-size: 12.0px;
+}
+
+.dark-bg {
+	-fx-background-color: grey;
+}
+
+.transparent {
+	-fx-background-color: transparent;
+}
+
+.theme-1 {
+	-fx-background-image: url('bg-1.jpg');
+}
+
+.theme-2 {
+	-fx-background-image: url('bg-2.jpg');
+}
+
+.theme-3 {
+	-fx-background-image: url('bg-3.jpg');
+}
+
+.theme-4 {
+	-fx-background-image: url('bg-4.jpg');
+}
+
+.root-pane {
+	-fx-padding: 10.0px;
+	-fx-background-size: cover;
+}
+
+.top-pane {
+	-fx-pref-height: 100.0px;
+}
+
+.theme-button {
+	-fx-pref-height: 25.0px;
+	-fx-pref-width: 25.0px;
+	-fx-background-color: transparent;
+	-fx-background-image: url('theme.png');
+	-fx-background-size: cover;
+}
+
+.theme-button:hover {
+	-fx-background-image: url('theme_hover.png');
+}
+
+.tab-pane {
+	-fx-min-height: 350.0px;
+	-fx-min-width: 350.0px;
+	-fx-border-width: 5.0px;
+	-fx-border-style: solid;
+	-fx-border-color: rgb(238.0,238.0,236.0);
+}
+
+.menu-button {
+	-fx-pref-width: 300.0px;
+	-fx-pref-height: 30.0px;
+}
+
+.form-button {
+	-fx-pref-width: 425.0px;
+	-fx-pref-height: 30.0px;
+}
+
+.form-button-half {
+	-fx-pref-width: 200.0px;
+	-fx-pref-height: 30.0px;
+}
+
+.start-button {
+	-fx-text-fill: red;
+}
+
+.spinner {
+	-fx-pref-width: 75.0px;
+}  
+
+.hidden-tab-header {
+	-fx-tab-max-height: 0px;
+	visibility: hidden;
+}
+
+.toggle-button {
+	-fx-font-size: 8px;
+}
