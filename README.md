@@ -1,5 +1,5 @@
 <h2 align="center">
-  Arma 3 Life Support Client (rebranded to Life-Studios)<br/>
+  Arma 3 Life Support Client<br/>
 </h2>
 
 <div align="center">
