@@ -3,7 +3,7 @@
 </h2>
 
 <div align="center">
-  <img alt="A3L Demo" src="./Images/readme-A3L-demo.gif" /> <img alt="LS Demo" src="./Images/readme-LS-demo.png" /> <img alt="LS Demo" src="./Images/readme-RPS-demo.png" />
+  <img alt="A3L Demo" src="./Images/readme-A3L-demo.gif" />
 </div>
 
 <br/>
