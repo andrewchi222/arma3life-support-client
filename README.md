@@ -1,5 +1,5 @@
 <h2 align="center">
-  Arma 3 Life Support Client<br/>
+  Arma 3 Life Support Client (rebranded to Life-Studios)<br/>
 </h2>
 
 <div align="center">
@@ -27,15 +27,15 @@ This project was built using these technologies.
 
 ## Features
 
-**Custom Backgrounds**
+Custom Background
 
-**Hidden Easter Eggs with nostalgic remarks**
+Hidden Easter Eggs with nostalgic remarks
 
-**Detailed Interview Form with an age check functionality**
+Detailed Interview Form with an age check functionality
 
-**Verbal Support Request Form**
+Verbal Support Request Form
 
-**Support Ticket Form**
+Support Ticket Form
 
 
 ## Introduction
