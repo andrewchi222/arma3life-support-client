@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="root-pane" fx:id="rootPane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainUIController">
+	<center>
+		<TabPane fx:id="tabPane" opacity="0.8" styleClass="tab-pane" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+			<tabs>
+				<Tab fx:id="menuTab" text="Menu">
+					<content>
+						<GridPane alignment="CENTER" vgap="10.0">
+							<columnConstraints>
+								<ColumnConstraints hgrow="ALWAYS" />
+								<ColumnConstraints hgrow="ALWAYS" minWidth="75.0" prefWidth="75.0" />
+							</columnConstraints>
+							<children>
+								<Button fx:id="rulesBtn" alignment="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Official Rules" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+								<Button fx:id="supportTicketFormBtn" alignment="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Support Ticket Form (Forums)" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+								<Button fx:id="interviewProcedureBtn" alignment="CENTER" mnemonicParsing="false" onAction="#initialize" styleClass="menu-button" text="Interview Procedure" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+								<Button fx:id="interviewQuestionsBtn" alignment="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Interview Questions" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+								<Button fx:id="startBtn" alignment="CENTER" mnemonicParsing="false" text="Start Interview" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+									<styleClass>
+										<String fx:value="menu-button" />
+										<String fx:value="start-button" />
+									</styleClass>
+								</Button>
+								<FlowPane alignment="CENTER_LEFT" columnHalignment="CENTER" prefWrapLength="300.0" GridPane.rowIndex="8">
+									<children>
+										<Label alignment="BOTTOM_LEFT" text="Copyright" textFill="WHITE" />
+										<Hyperlink fx:id="developerLabel" alignment="BOTTOM_LEFT" graphicTextGap="0.0" text="andrewchi222" textFill="WHITE" />
+										<Label text="for Roleplay Studios © 2019" textFill="WHITE" />
+									</children>
+									<padding>
+										<Insets left="20.0" />
+									</padding>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+								</FlowPane>
+								<FlowPane alignment="CENTER_RIGHT" columnHalignment="CENTER" prefWrapLength="0.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+									<children>
+										<Label fx:id="versionLabel" alignment="CENTER_RIGHT" graphicTextGap="0.0" text="Version &lt;version&gt;" textFill="WHITE" />
+									</children>
+									<opaqueInsets>
+										<Insets />
+									</opaqueInsets>
+									<padding>
+										<Insets right="20.0" />
+									</padding>
+								</FlowPane>
+                        <FlowPane alignment="CENTER" columnHalignment="CENTER" prefWrapLength="300.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="9">
+                           <children>
+                              <Label alignment="BOTTOM_LEFT" text="Found a Bug?" textFill="WHITE" />
+                              <Hyperlink fx:id="bugLabel" alignment="BOTTOM_LEFT" graphicTextGap="0.0" text="Report Here" textFill="WHITE" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </FlowPane>
+                        <Button fx:id="supportCaseFormBtn" alignment="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Support Case Form" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+							</children>
+							<rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints />
+								<RowConstraints />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints />
+								<RowConstraints />
+								<RowConstraints />
+                        <RowConstraints minHeight="10.0" prefHeight="20.0" valignment="BOTTOM" vgrow="ALWAYS" />
+								<RowConstraints valignment="BOTTOM" vgrow="ALWAYS" />
+								<RowConstraints />
+								<RowConstraints />
+								<RowConstraints />
+							</rowConstraints>
+							<opaqueInsets>
+								<Insets />
+							</opaqueInsets>
+							<padding>
+								<Insets top="10.0" />
+							</padding>
+						</GridPane>
+					</content>
+				</Tab>
+				<Tab fx:id="linksTab" disable="true" styleClass="hidden-tab-header">
+					<content>
+						<GridPane hgap="10.0">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="50.0" valignment="BOTTOM" vgrow="ALWAYS" />
+							</rowConstraints>
+							<children>
+								<Label text="Links" textFill="WHITE" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
+									<font>
+										<Font name="System Bold" size="14.0" />
+									</font>
+								</Label>
+								<Label text="Account Link :" textFill="WHITE" GridPane.rowIndex="2" />
+								<TextField fx:id="accountLinkTxt" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
+								<Label text="Civilian Application Link :" textFill="WHITE" GridPane.rowIndex="3" />
+								<TextField fx:id="applicationLinkTxt" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" />
+								<Label text="Previously Failed an Interview :" textFill="WHITE" GridPane.rowIndex="4" />
+								<ComboBox fx:id="prevFailedInvCmb" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+								<Label text="Links to Failed Interview Logs :" textFill="WHITE" GridPane.rowIndex="5" />
+								<TextField fx:id="linksToFailedTxt" disable="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="5" />
+								<Button fx:id="linksNextPageBtn" mnemonicParsing="false" text="Next Page &gt;&gt;" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+									<styleClass>
+										<String fx:value="menu-button" />
+										<String fx:value="form-button" />
+									</styleClass>
+								</Button>
+							</children>
+							<padding>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+							</padding>
+						</GridPane>
+					</content>
+				</Tab>
+				<Tab fx:id="generalTab" disable="true" styleClass="hidden-tab-header">
+					<content>
+						<GridPane hgap="10.0">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" />
+								<ColumnConstraints hgrow="SOMETIMES" />
+								<ColumnConstraints hgrow="SOMETIMES" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="50.0" valignment="BOTTOM" vgrow="ALWAYS" />
+							</rowConstraints>
+							<children>
+								<Label text="General Information" textFill="WHITE" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
+									<font>
+										<Font name="System Bold" size="14.0" />
+									</font>
+								</Label>
+								<Label text="Forum Username :" textFill="WHITE" GridPane.rowIndex="2" />
+								<TextField fx:id="usernameTxt" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
+								<Label text="Roleplay Name :" textFill="WHITE" GridPane.rowIndex="3" />
+								<TextField fx:id="rpNameTxt" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" />
+								<Label text="Location :" textFill="WHITE" GridPane.rowIndex="4" />
+								<TextField fx:id="locationTxt" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="4" />
+								<Label text="Speaks English Fluently :" textFill="WHITE" GridPane.rowIndex="5" />
+                        <ComboBox fx:id="languageCmb" maxWidth="75.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+								<Label text="Age :" textFill="WHITE" GridPane.rowIndex="6" />
+								<Spinner fx:id="ageSpinner" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+								<Button fx:id="ageCheckBtn" mnemonicParsing="false" text="Age Check" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+								<Label text="Date of Birth :" textFill="WHITE" GridPane.rowIndex="7" />
+								<DatePicker fx:id="dobDatePicker" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="7" />
+								<Label text="Found out about Roleplay Studios :" textFill="WHITE" GridPane.rowIndex="8" />
+								<TextField fx:id="foundAboutTxt" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="8" />
+
+								<Button fx:id="generalPrevPageBtn" mnemonicParsing="false" text="&lt;&lt; Prev Page" GridPane.columnSpan="2147483647" GridPane.rowIndex="9">
+									<styleClass>
+										<String fx:value="menu-button" />
+										<String fx:value="form-button-half" />
+									</styleClass>
+								</Button>
+								<Button fx:id="generalNextPageBtn" mnemonicParsing="false" text="Next Page &gt;&gt;" GridPane.columnSpan="2147483647" GridPane.rowIndex="9">
+									<styleClass>
+										<String fx:value="menu-button" />
+										<String fx:value="form-button-half" />
+									</styleClass>
+                           <GridPane.margin>
+                              <Insets left="210.0" />
+                           </GridPane.margin>
+								</Button>
+							</children>
+							<padding>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+							</padding>
+						</GridPane>
+					</content>
+				</Tab>
+				<Tab fx:id="interviewTab" disable="true" styleClass="hidden-tab-header">
+					<content>
+						<GridPane hgap="10.0">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="50.0" valignment="BOTTOM" vgrow="ALWAYS" />
+							</rowConstraints>
+							<children>
+								<Label text="Interview Log" textFill="WHITE" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
+									<font>
+										<Font name="System Bold" size="14.0" />
+									</font>
+								</Label>
+								<Label text="Half Incorrect :" textFill="WHITE" GridPane.rowIndex="2" />
+								<TextField fx:id="halfIncorrectTxt" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
+								<Label text="(Point Value = 0.50 Each)" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+								<Label text="Incorrect :" textFill="WHITE" GridPane.rowIndex="4" />
+								<TextField fx:id="incorrectTxt" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="4" />
+								<Label text="(Point Value = 1.00 Each)" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+								<Label text="Interview Status :" textFill="WHITE" GridPane.rowIndex="6" />
+								<ComboBox fx:id="ruleTestCmb" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+								<Label text="Notes :" textFill="WHITE" GridPane.rowIndex="7" />
+								<TextField fx:id="notesTxt" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="7" />
+								<Label text="Please include in the notes, if they failed due to cheating." textFill="WHITE" GridPane.columnSpan="2147483647" GridPane.rowIndex="8" />
+                        <Button fx:id="interviewPrevPageBtn" mnemonicParsing="false" text="&lt;&lt; Prev Page" GridPane.rowIndex="9">
+                           <styleClass>
+                              <String fx:value="menu-button" />
+                              <String fx:value="form-button-half" />
+                           </styleClass>
+                        </Button>
+								<Button fx:id="finishBtn" mnemonicParsing="false" text="Finish Interview" textFill="#1a0000" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="9">
+									<styleClass>
+										<String fx:value="menu-button" />
+										<String fx:value="form-button-half" />
+										<String fx:value="start-button" />
+									</styleClass>
+                           <GridPane.margin>
+                              <Insets left="210.0" />
+                           </GridPane.margin>
+								</Button>
+							</children>
+							<padding>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+							</padding>
+						</GridPane>
+					</content>
+				</Tab>
+				<Tab fx:id="logTab">
+					<content>
+						<GridPane hgap="10.0" vgap="10.0">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES" />
+								<ColumnConstraints hgrow="SOMETIMES" />
+								<ColumnConstraints hgrow="SOMETIMES" />
+								<ColumnConstraints hgrow="SOMETIMES" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints minHeight="10.0" prefHeight="30.0" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+							</rowConstraints>
+							<children>
+								<Button fx:id="generateBtn" disable="true" mnemonicParsing="false" text="Generate" />
+								<Button fx:id="copyBtn" disable="true" mnemonicParsing="false" text="Copy" GridPane.columnIndex="1" />
+								<Button fx:id="postToForumsBtn" disable="true" mnemonicParsing="false" text="Post to Forums" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+								<Button fx:id="postToSecLogBtn" disable="true" mnemonicParsing="false" text="Post Secondary Log" GridPane.columnIndex="3" GridPane.halignment="RIGHT" />
+								<TextArea fx:id="logTextArea" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" />
+							</children>
+							<padding>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+							</padding>
+						</GridPane>
+					</content>
+				</Tab>
+            <Tab fx:id="supportTicketTab">
+               <content>
+                  <GridPane hgap="10.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="50.0" valignment="BOTTOM" vgrow="ALWAYS" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Name of Member :" textFill="WHITE" GridPane.rowIndex="2" />
+                        <TextField fx:id="nameOfMemberForumsTxt" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Date of Ticket :" textFill="WHITE" GridPane.rowIndex="3" />
+                        <DatePicker fx:id="dateOfTicket" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Link to User's Profile :" textFill="WHITE" GridPane.rowIndex="4" />
+                        <TextField fx:id="userProfileLinkTxt" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Link to Support Ticket :" textFill="WHITE" GridPane.rowIndex="5" />
+                        <TextField fx:id="supportTicketLink" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="Description of the Issue :" textFill="WHITE" GridPane.rowIndex="6" />
+                        <TextField fx:id="issueDescTxt" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label text="Issue Resolved :" textFill="WHITE" GridPane.rowIndex="7" />
+                        <ComboBox fx:id="issueResolvedCmb" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Button fx:id="postForumsLogBtn" mnemonicParsing="false" text="Post Log" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+                           <styleClass>
+                              <String fx:value="menu-button" />
+                              <String fx:value="form-button" />
+                           </styleClass>
+                        </Button>
+                        <Label text="Support Ticket Form (Forums)" textFill="WHITE" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab fx:id="supportCaseTab">
+               <content>
+                  <GridPane hgap="10.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="50.0" valignment="BOTTOM" vgrow="ALWAYS" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Support Case Form" textFill="WHITE" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Name of Member :" textFill="WHITE" GridPane.rowIndex="2" />
+                        <TextField fx:id="memberNameTxt" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Type of Issue :" textFill="WHITE" GridPane.rowIndex="3" />
+                        <CheckBox fx:id="serverIssueChk" mnemonicParsing="false" text="Server Issue" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <CheckBox fx:id="tsIssueChk" mnemonicParsing="false" text="TeamSpeak/Discord Issue" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <CheckBox fx:id="modPkgChk" mnemonicParsing="false" text="Mod Package Installation" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <CheckBox fx:id="genQuestionChk" mnemonicParsing="false" text="General Question" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label text="Issue Resolved :" textFill="WHITE" GridPane.rowIndex="7" />
+                        <ComboBox fx:id="issueResolvedTSCmb" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Button fx:id="postTSLogBtn" mnemonicParsing="false" text="Post Log" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+                           <styleClass>
+                              <String fx:value="menu-button" />
+                              <String fx:value="form-button" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </GridPane>
+               </content>
+            </Tab>
+			</tabs>
+		</TabPane>
+	</center>
+	<styleClass>
+		<String fx:value="root-pane" />
+		<String fx:value="font-style" />
+		<String fx:value="dark-bg" />
+	</styleClass>
+	<top>
+		<GridPane styleClass="top-pane" BorderPane.alignment="CENTER">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+            <FlowPane prefHeight="200.0" prefWidth="200.0">
+            </FlowPane>
+				<ImageView fx:id="logoImg" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
+					<image>
+						<Image url="@logo.png" />
+					</image>
+				</ImageView>
+				<Label fx:id="messageLbl" visible="false" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+					<padding>
+						<Insets bottom="10.0" />
+					</padding>
+					<GridPane.margin>
+						<Insets left="200.0" />
+					</GridPane.margin>
+					<textFill>
+						<LinearGradient endX="1.0" endY="1.0">
+							<stops>
+								<Stop color="#c9adad" />
+								<Stop color="#d6eb9b82" offset="1.0" />
+							</stops>
+						</LinearGradient>
+					</textFill>
+				</Label>
+            <Button fx:id="themeBtn" mnemonicParsing="false" styleClass="theme-button" GridPane.halignment="RIGHT" GridPane.valignment="TOP" />
+			</children>
+		</GridPane>
+	</top>
+</BorderPane>
