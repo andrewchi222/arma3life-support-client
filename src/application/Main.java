@@ -24,7 +24,7 @@ public class Main extends Application {
     public static String messages[];
 
     public static final String APP_TITLE = "Arma 3 Life Support Client";
-    public static final String APP_VERSION = "0.1.A3L";
+    public static final String APP_VERSION = "3.3.0";
 
     private static final String PROPERTY_FILE = "config.properties";
     private static final int MIN_HEIGHT = 550;
@@ -46,9 +46,9 @@ public class Main extends Application {
 		    "");
 	    properties.setProperty("post_to_secondary_log_url",
 		    "");
-	    properties.setProperty("developer_url", "https://andrewfernandessbarbaro.com/");
+	    properties.setProperty("developer_url", "https://github.com/andrewchi222/arma3life-support-client");
 	    properties.setProperty("report_bug_url",
-		    "");
+		    "https://github.com/andrewchi222/arma3life-support-client/issues");
 	    properties.setProperty("post_log_support_ticket",
 		    "");
 	    properties.setProperty("post_log_team_speak",
