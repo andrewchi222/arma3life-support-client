@@ -50,4 +50,4 @@ No support will be given. This project is extremely deprecated at this point. Yo
 
 ## Giving Credit
 
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [ancdrewchi222](https://github.com/andrewchi222/arma3life-support-client). Thanks!
+You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [andrewchi222](https://github.com/andrewchi222/arma3life-support-client). Thanks!
